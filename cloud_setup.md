@@ -53,3 +53,15 @@
 
 #### Diagram of set up process:
 ![](img/EC2_diagram.png)
+
+
+## Adding files from local host to EC2
+
+- `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`
+  - SCP is secure file proxy
+  - -i is identifier
+  - pem location
+  - -r receive
+  - destination
+  - Public DNS/ec2 id
+  - source file or folder
