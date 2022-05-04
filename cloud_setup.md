@@ -49,3 +49,7 @@
   - sudo apt-get install nginx -y
 - Go to your public IP (found on EC2 Instance connect)
 - Post in url bar - Tada!
+
+
+#### Diagram of set up process:
+![](img/EC2_diagram.png)
