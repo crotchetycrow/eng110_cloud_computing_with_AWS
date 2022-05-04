@@ -65,3 +65,5 @@
   - destination
   - Public DNS/ec2 id
   - source file or folder
+
+`netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
