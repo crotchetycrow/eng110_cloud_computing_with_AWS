@@ -21,21 +21,47 @@
 
 ## Intro to AWS
 
-- Regions?
-  - Latency
-- Availability zones?
-  - Why multiple availability zones (DR)?
-  - High availability?
-- Types of cloud?
-  - Public
-  - Private
-  - Hybrid
-- Services?
+#### Regions:
+  - Physical locations for data centres around the globe for Amazon/Microsoft/Google to store their servers 
+    - Latency
+#### Availability zones:
+  - Isolated locations within regions which contains the power and network connectivity
+  - Multiple AZs are created so that in the instance of data centre failures there are backups for disaster recovery
+  - The high availability nature of AZs means that there is reliable performance and minimal downtime
+#### Types of cloud
+  - Public cloud:
+    - Cloud services offered by a third party (Amazon/Microsoft/Google) to multiple tenants
+    - Data centres are owned by third party
+  - Private cloud:
+    - Cloud services offered by a third party (Amazon/Microsoft/Google) to specific tenants
+    - Data centres might be owned by organisations
+    - Organisations might have their own infrastructure
+  - Hybrid cloud:
+    - Cloud services offered by a third party (Amazon/Microsoft/Google) to multiple tenants
+    - Data centres might be owned by organisations and services would be provided by third party (or vice versa)
+#### Services
   - IaaS
+    - A third party provides clients pay-as-you-go access to:
+    - Storage, networking, servers, and other computing resources in the cloud.
   - PaaS
+    - A service provider offers access to:
+    - A cloud-based environment in which users can build and deliver applications
+    - The provider supplies underlying infrastructure
   - SaaS
-- Microservices?
-  - Benefit?
+    - A service provider:
+    - Delivers software and applications through the internet
+    - Users subscribe to the software and access it via the web or vendor APIs
+#### Microservices
+  - An architectural approach to creating cloud applications
+    - Each application is built as a set of services, and each service runs in its own processes and communicates through APIs
+      - Benefits:
+        - Update code at any time using continuous integration/continuous delivery (CI/CD)
+        - Development teams can work in parallel. Small teams can move faster than large teams
+        - Because the components of microservices architectures are granular, it’s easier to improve and maintain code
+      - Disadvantages:
+        - Difficult to manage a large number of services
+        - Complex testing over a distributed environment
+        - Harder to maintain the network as it has less fault tolerance, needs more load balancing
 
 ## AWS Best Practices
 
