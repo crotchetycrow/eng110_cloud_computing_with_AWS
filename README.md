@@ -23,7 +23,7 @@
 
 #### Regions:
   - Physical locations for data centres around the globe for Amazon/Microsoft/Google to store their servers 
-    - Latency
+    - Low latency means that your users have improved connectivity
 #### Availability zones:
   - Isolated locations within regions which contains the power and network connectivity
   - Multiple AZs are created so that in the instance of data centre failures there are backups for disaster recovery
