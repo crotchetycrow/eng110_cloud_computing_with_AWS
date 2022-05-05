@@ -42,11 +42,11 @@
 - Click on SSH CLIENT
   - Copy the command example
 - Open your git bash terminal:
-  - cd into .ssh
+  - `cd .ssh`
   - paste command
-  - sudo apt-get update -y
-  - sudo apt-get upgrade -y
-  - sudo apt-get install nginx -y
+  - `sudo apt-get update -y`
+  - `sudo apt-get upgrade -y`
+  - `sudo apt-get install nginx -y`
 - Go to your public IP (found on EC2 Instance connect)
 - Post in url bar - Tada!
 
