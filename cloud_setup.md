@@ -88,14 +88,21 @@
 
 #### Setting up MongoDB
 
-- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4`
-- `sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse'`
+- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4` - The key for MongoDB
+- `sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse'` - The version for MongoDB
 - `sudo apt update -y`
-- `sudo apt install mongodb-org -y`
+- `sudo apt install mongodb-org -y` - Install the specified version of MongoDB
 - `sudo systemctl start mongod`
 - `sudo systemctl enable mongod`
-- `mongo --eval 'db.runCommand({ connectionStatus: 1 })'` - Verify
+- `mongo --eval 'db.runCommand({ connectionStatus: 1 })'` - Verify status/version
   - or `sudo systemctl status mongod`
 
+#### Connecting App EC2 to DB EC2
+- In Security Group add a rule to connect EC2s:
+  - Custom TCP - Port Range 27017 (Mongodb default), Source 'insert EC2(app) Public IP/32'
+- `sudo node seeds/seed.js` - Finds, connects and seeds to DB
+- `npm start` - Tada!
+
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
+
 
