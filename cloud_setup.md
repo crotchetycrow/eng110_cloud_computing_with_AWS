@@ -66,4 +66,35 @@
   - Public DNS/ec2 id
   - source file or folder
 
+#### Reverse proxy with NGINX
+
+- In Security Groups, edit inbound rules
+  - Custom TCP, set port range to 3000
+- In /etc/nginx/sites-available/default:
+  - `nano default` and add the following:
+    - server_name your-ip;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+                proxy_pass http://localhost:3000;
+        }
+
+        location /fibonacci/ {
+                proxy_pass http://localhost:3000/fibonacci/;
+        }
+- `npm start` - Tada!
+
+#### Setting up MongoDB
+
+- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4`
+- `sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse'`
+- `sudo apt update -y`
+- `sudo apt install mongodb-org -y`
+- `sudo systemctl start mongod`
+- `sudo systemctl enable mongod`
+- `mongo --eval 'db.runCommand({ connectionStatus: 1 })'` - Verify
+  - or `sudo systemctl status mongod`
+
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
