@@ -78,5 +78,5 @@ Cloud computing is the delivery of computing services such as software, database
 - Use Ireland region EU-WEST1/A/B/C
 - AWS KEYS MUST NOT BE SHARED
   - SAVE LOCAL
-- eng110.pem - Move to .ssh folder in your machine
+- file.pem - Move to .ssh folder in your machine
 
