@@ -36,7 +36,7 @@
     - Choose existing key pair:
       - eng119 | RSA
 
-#### Connecting to EC2
+## Connecting to EC2
 - Click on instance
 - Connect (top right)
 - Click on SSH CLIENT
@@ -65,7 +65,7 @@
   - destination
   - Public DNS/ec2 id
   - source file or folder
-
+  
 #### Reverse proxy with NGINX
 
 - In Security Groups, edit inbound rules
@@ -98,3 +98,4 @@
   - or `sudo systemctl status mongod`
 
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
+

@@ -1,5 +1,7 @@
 # What is cloud computing?
 
+Cloud computing is the delivery of computing services such as software, databases, servers and networking, over the internet. This means end users are able to access software and applications from wherever they are.
+
 - Benefits?
   - Optimized costs: CapEx vs OpEx
   - Flexibility and scalability:
@@ -23,7 +25,7 @@
 
 #### Regions:
   - Physical locations for data centres around the globe for Amazon/Microsoft/Google to store their servers 
-    - Latency
+    - Low latency means that your users have improved connectivity
 #### Availability zones:
   - Isolated locations within regions which contains the power and network connectivity
   - Multiple AZs are created so that in the instance of data centre failures there are backups for disaster recovery
@@ -76,5 +78,5 @@
 - Use Ireland region EU-WEST1/A/B/C
 - AWS KEYS MUST NOT BE SHARED
   - SAVE LOCAL
-- eng110.pem - Move to .ssh folder in your machine
+- file.pem - Move to .ssh folder in your machine
 
