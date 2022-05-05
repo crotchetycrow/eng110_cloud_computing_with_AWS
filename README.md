@@ -1,5 +1,7 @@
 # What is cloud computing?
 
+Cloud computing is the delivery of computing services such as software, databases, servers and networking, over the internet. This means end users are able to access software and applications from wherever they are.
+
 - Benefits?
   - Optimized costs: CapEx vs OpEx
   - Flexibility and scalability:
