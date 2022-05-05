@@ -36,7 +36,7 @@
     - Choose existing key pair:
       - eng119 | RSA
 
-#### Connecting to EC2
+## Connecting to EC2
 - Click on instance
 - Connect (top right)
 - Click on SSH CLIENT
