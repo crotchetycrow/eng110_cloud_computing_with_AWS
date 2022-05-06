@@ -117,6 +117,8 @@
 - Insert image name, description and tags
 - Create - Tada!
 
+![](img/AMI_diagram.png)
+
 #### Creating an instance from an AMI
 - Go to AMI
 - Select the AMI
