@@ -50,11 +50,6 @@
 - Go to your public IP (found on EC2 Instance connect)
 - Post in url bar - Tada!
 
-
-#### Diagram of set up process:
-![](img/EC2_diagram.png)
-
-
 ## Adding files from local host to EC2
 
 - `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`
@@ -65,6 +60,28 @@
   - destination
   - Public DNS/ec2 id
   - source file or folder
+
+#### App set up
+
+- `cd starter-code/app` - Changes into the appropriate directory
+
+- `sudo apt-get install software-properties-common -y` - Installs common-software-properties
+
+- `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -` -
+  Makes a curl request to https://deb.nodesource.com and downloads the specific nodejs version (in this case 12)
+
+- `sudo apt-get install -y nodejs` -
+  Installs the nodejs version requested with the above curl request
+
+- `sudo apt-get update -y` - Updates
+
+- `npm install` - Installs the dependencies
+
+- `npm start &` - Runs npm in the background
+
+#### Diagram of set up process:
+![](img/EC2_diagram.png)
+
   
 #### Reverse proxy with NGINX
 
@@ -86,6 +103,13 @@
         }
 - `npm start` - Tada!
 
+#### Setting up a DB EC2
+
+- Follow steps to set up an EC2 instance
+- In Security Group add a rule to connect EC2s:
+  - SSH - My IP
+  - Custom TCP - Port Range 27017 (Mongodb default), Source 'insert EC2(app) Public IP/32'
+
 #### Setting up MongoDB
 
 - `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4` - The key for MongoDB
@@ -100,8 +124,6 @@
 #### Connecting App EC2 to DB EC2
 - In the app EC2 app folder create an env variable DB_HOST
   - `export DB_HOST=mongodb://db-ip:27017/posts`
-- In Security Group add a rule to connect EC2s:
-  - Custom TCP - Port Range 27017 (Mongodb default), Source 'insert EC2(app) Public IP/32'
 - `sudo node seeds/seed.js` - Finds, connects and seeds to DB
 - `npm start` - Tada!
 
