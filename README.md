@@ -65,6 +65,23 @@ Cloud computing is the delivery of computing services such as software, database
         - Complex testing over a distributed environment
         - Harder to maintain the network as it has less fault tolerance, needs more load balancing
 
+## What is an AMI?
+
+An Amazon Machine Image is a master image for the creation of virtual servers (EC2).
+
+The machine images are like templates that are configured with an operating system and other software that determine the user's operating environment.
+
+- Benefits
+  - Pre-configured templates that allow you to quickly deploy one or more instances
+  - Quickly and efficiently determine what computing power, memory, storage and other factors you need for apps
+  - Low cost
+  - Flexibility
+    - Run various different OS
+    - Can include many AWS services
+  - Scale and experiment with instances without worrying about infrastructure
+- Use cases
+  - Preparing a template for multiple EC2s that might need a base configuration but might have different functionality (think inheritance/polymorphism)
+
 ## AWS Best Practices
 
 - Naming conventions

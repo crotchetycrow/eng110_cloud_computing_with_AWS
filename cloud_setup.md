@@ -98,10 +98,16 @@
   - or `sudo systemctl status mongod`
 
 #### Connecting App EC2 to DB EC2
+- In the app EC2 app folder create an env variable DB_HOST
+  - `export DB_HOST=mongodb://db-ip:27017/posts`
 - In Security Group add a rule to connect EC2s:
   - Custom TCP - Port Range 27017 (Mongodb default), Source 'insert EC2(app) Public IP/32'
 - `sudo node seeds/seed.js` - Finds, connects and seeds to DB
 - `npm start` - Tada!
+
+
+## Upon stopping and restarting the EC2s
+- Repeat previous steps
 
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
 
