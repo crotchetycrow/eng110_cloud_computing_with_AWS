@@ -159,8 +159,9 @@ Amazon S3 (Simple Storage Service) provides object storage, which is built for s
 - Assign a region
 - Enable or disable ACLs (Access control list) in object ownership
 - Create bucket
-![](img/S3_diagram.png)
-- 
+
+- ![](img/S3_diagram.png)
+
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
 
 
