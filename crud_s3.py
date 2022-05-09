@@ -26,6 +26,9 @@ def read_file(bucket, file_name):
     text = s3_obj['Body'].read().decode('utf-8')
     return text
 
+def retrieve_file(bucket, object_name, file_name):
+    s3 = boto3.client('s3')
+    s3.download_file(bucket, object_name, file_name)
 
 def upload_file(file_name, bucket, object_name=None):
     if object_name is None:
@@ -52,7 +55,8 @@ def delete_bucket(bucket):
 
 
 # create_bucket('eng110-jack-test', 'eu-west-1')
-# upload_file('test.txt', 'eng110-jack-test', 'test.txt')
 # read_file('eng110-jack-test', 'test.txt')
+# retrieve_file('eng110-jack-test', 'test.txt', 'test.txt')
+# upload_file('test.txt', 'eng110-jack-test', 'test.txt')
 # delete_file('eng110-jack-test', 'test.txt')
 # delete_bucket('eng110-jack-test')
