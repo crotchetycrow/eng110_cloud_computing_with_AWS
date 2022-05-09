@@ -173,7 +173,7 @@ S3 is essentially a globally available folder.
 - `aws s3 cp s3://eng110-jack/test.txt test.txt` - aws 'service' 'command' (aws s3 <service> cp (cp file) <command> s3:// (where from?) eng110-jack (name) (where to))
 
 
-#### Setting up an S3 bucket
+#### Setting up an S3 bucket from AWS interface
 
 - Search for S3 in search bar and select
 - Select create bucket option
