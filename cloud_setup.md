@@ -166,16 +166,33 @@ S3 is essentially a globally available folder.
   - Secret access key
   - Region - eu-west-1
   - Data format - json
+
+#### Setting up an S3 bucket via AWS CLI
+
 - `aws s3 ls` - Sends a request to s3 and lists everything (This is how we know we've set up AWS CLI correctly)
 - `aws s3 mb s3://eng110-jack` - aws 'service' 'command' (aws s3 <service> mb (make bucket) <command> s3:// (where?) eng110-jack (name))
 - `sudo nano test.txt` - Create a file to send from EC2 to S3
 - `aws s3 cp test.txt s3://eng110-jack/` - Copies file from EC2 to S3
 - `aws s3 cp s3://eng110-jack/test.txt test.txt` - aws 'service' 'command' (aws s3 <service> cp (cp file) <command> s3:// (where from?) eng110-jack (name) (where to))
+- `aws s3 rb s3://eng110-jack` - Removes the bucket (must be empty)
+- `aws s3 rm s3://eng110-jack/test.txt` - Removes file `--recursive` at the end removes everything, keeps going until empty
+
+#### Intalling boto3
+- `pip3 install boto3`
+- 
+
+#### Setting permissions to access S3 files from AWS interface
+- Search for S3 in search bar and select
+- Select bucket
+- Select file
+- Select permissions tab
+- Press Edit
+- Change ACL and save
 
 
 #### Setting up an S3 bucket from AWS interface
 
-- Search for S3 in search bar and select
+
 - Select create bucket option
 - Assign a name
 - Assign a region
