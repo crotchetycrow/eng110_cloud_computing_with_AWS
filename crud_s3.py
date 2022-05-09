@@ -6,18 +6,13 @@ import os
 
 
 def create_bucket(bucket_name, region=None):
-    try:
-        if region is None:
-            s3_client = boto3.client('s3')
-            s3_client.create_bucket(Bucket=bucket_name)
-        else:
-            s3_client = boto3.client('s3', region_name=region)
-            location = {'LocationConstraint': region}
-            s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+    if region is None:
+        s3_client = boto3.client('s3')
+        s3_client.create_bucket(Bucket=bucket_name)
+    else:
+        s3_client = boto3.client('s3', region_name=region)
+        location = {'LocationConstraint': region}
+        s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
 
 
 def read_file(bucket, file_name):
@@ -26,21 +21,17 @@ def read_file(bucket, file_name):
     text = s3_obj['Body'].read().decode('utf-8')
     return text
 
+
 def retrieve_file(bucket, object_name, file_name):
     s3 = boto3.client('s3')
     s3.download_file(bucket, object_name, file_name)
 
+
 def upload_file(file_name, bucket, object_name=None):
     if object_name is None:
         object_name = os.path.basename(file_name)
-
     s3_client = boto3.client('s3')
-    try:
-        response = s3_client.upload_file(file_name, bucket, object_name)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+    s3_client.upload_file(file_name, bucket, object_name)
 
 
 def delete_file(bucket, file_name):
@@ -52,7 +43,6 @@ def delete_file(bucket, file_name):
 def delete_bucket(bucket):
     s3 = boto3.client('s3')
     resp = s3.delete_bucket(Bucket=bucket)
-
 
 # create_bucket('eng110-jack-test', 'eu-west-1')
 # read_file('eng110-jack-test', 'test.txt')
