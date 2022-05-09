@@ -147,6 +147,20 @@
 - Select Launch instance from AMI
 - Same procedures as setting up an EC2
 
+## What is S3 Bucket
+
+Amazon S3 (Simple Storage Service) provides object storage, which is built for storing and recovering any amount of information or data from anywhere over the internet. It provides this storage through a web services interface.
+
+#### Setting up an S3 bucket
+
+- Search for S3 in search bar and select
+- Select create bucket option
+- Assign a name
+- Assign a region
+- Enable or disable ACLs (Access control list) in object ownership
+- Create bucket
+![](img/S3_diagram.png)
+- 
 `netstat -tulpn | grep PORT_NUMBER` - checks if the port is listening to X
 
 
