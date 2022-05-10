@@ -52,6 +52,12 @@ Simple scaling policies:
 
 - Simple scaling relies on a metric as a basis for scaling. For example, you can set a CloudWatch alarm to have a CPU Utilization threshold of 80%, and then set the scaling policy to add 20% more capacity to your Auto Scaling group by launching new instances.
 
+## Scaling out/in vs scaling up/down
+
+Scaling out/in is horizontal scaling, increasing infrastructure to support increasing load. For example, adding more of the same functional components to spread out a load.
+
+Scaling up/down is vertical scaling, making a component larger or faster to handle a greater load. For example, increasing storage or number of CPUs.
+
 ## Scalability
 
 The ability of a system to take advantage of additional resources, such as database servers, processors, memory, or disk space
