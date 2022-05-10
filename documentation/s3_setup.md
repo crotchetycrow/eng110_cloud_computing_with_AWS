@@ -30,7 +30,6 @@ S3 is essentially a globally available folder.
 
 #### Intalling boto3
 - `pip3 install boto3`
-- 
 
 #### Setting permissions to access S3 files from AWS interface
 - Search for S3 in search bar and select
