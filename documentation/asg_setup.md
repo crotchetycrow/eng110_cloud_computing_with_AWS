@@ -11,6 +11,13 @@
 - Advanced options:
 
   - User data = provision.sh
-    `#!/bin/bash sudo apt-get update -y sudo apt-get upgrade -y sudo apt-get install nginx -y sudo systemctl restart nginx sudo systemctl enable nginx`
+    ```
+      #!/bin/bash
+      sudo apt-get update -y
+      sudo apt-get upgrade -y
+      sudo apt-get install nginx -y
+      sudo systemctl restart nginx
+      sudo systemctl enable nginx
+    ```
 
 - EC2 > AUTO SCALING GROUP >
