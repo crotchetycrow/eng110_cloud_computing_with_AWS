@@ -1,4 +1,4 @@
-## Setting up an Auto Scaling Group with AWS
+## Setting up an Auto Scaling Group launch template with AWS
 
 - From AWSManager select/search EC2
 - On the left side navbar select 'Launch template' from instance tab
@@ -23,4 +23,46 @@
       sudo systemctl enable nginx
     ```
 
-- EC2 > AUTO SCALING GROUP >
+#### Setting up an ASG with AWS
+
+- EC2 > AUTO SCALING GROUPs > CREATE AUTO SCALING GROUPS > NAME > LAUNCH TEMPLATE/CREATE > NEXT
+- AZ AND SUBNETS : 1A,1B,1C > NEXT
+- ATTACH NEW LOAD BALANCE :
+  - ALB(HTTP/S)
+  - Internet facing
+  - Create a target group/select
+- Next Group size and scaling policies:
+  - Desired: 2
+  - Minimum: 2
+  - Maximum: 3
+  - target tracking scaling policy (metric to be discussed with business owner)
+- Tags
+
+- Terminate to test it will spin up a new EC2
+- Increase usage to cause a crash
+
+#### Creating an alarm
+
+- AWSManager > EC2 > AGS > your ASG
+- Monitoring > CloudWatch > Alarms
+- Select 'create a new alarm'
+- Select 'metric'
+- EC2 > By Auto Scaling Group
+- eng110-jack-ASG-app 'CPUUtilization'
+- Select period
+- Define value (e.g. 50)
+- Create/Select SNS topic
+
+  - Create a new topic (name)
+  - Enter email
+
+- Add name and description
+
+- Create dynamic scaling policies
+- From the dropdown menu select 'Step scaling'
+- Name the policy
+- Select CloudWatch alarm from dropdown menu
+- Select an action from dropdown menu
+- Define the value of capacity units
+- Define time the instance needs to spin up
+- Hit create - Tada!
