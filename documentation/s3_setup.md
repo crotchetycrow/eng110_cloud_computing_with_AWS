@@ -4,7 +4,7 @@ Amazon S3 (Simple Storage Service) provides object storage, which is built for s
 
 S3 is essentially a globally available folder.
 
-![](img/S3_diagram.png)
+![](../img/S3_diagram.png)
 
 #### Setting up AWS CLI in EC2
 - Install python `sudo apt install python3`

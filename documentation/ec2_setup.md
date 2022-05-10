@@ -80,7 +80,7 @@
 - `npm start &` - Runs npm in the background
 
 #### Diagram of set up process:
-![](img/EC2_diagram.png)
+![](../img/EC2_diagram.png)
 
   
 #### Reverse proxy with NGINX
