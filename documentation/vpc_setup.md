@@ -38,6 +38,10 @@ Isolated space in Ireland - empty, the address has been validated
 - Preference - no preference
 - In IPv4 CIDR define the value as '10.0.3.0/24'
 
+Creating a private subnet
+
+- Using a calculator in IPv4 CIDR define the value as '10.0.128.0/24'
+
 ## Create route table
 
 - Select 'Route table' on left hand side
@@ -75,3 +79,15 @@ Isolated space in Ireland - empty, the address has been validated
 - Connect to EC2
 
 ![](../img/VPC_diagram.png)
+
+## Connecting a public subnet to a private subnet:
+
+- Create a private subnet with 10.0.255.0/24
+- Using your DB AMI, spin up an EC2 instance
+- In the security group, remove the SHH
+- Replace with custom TCP
+- In source enter app EC2 public IPv4
+- In app, unset DB_HOST
+- export DB_HOST=mongodb://db_private_IP:27017/posts
+
+Tada.
