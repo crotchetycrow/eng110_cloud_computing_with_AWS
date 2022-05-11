@@ -52,13 +52,18 @@ Isolated space in Ireland - empty, the address has been validated
 - Select 'Edit routes'
 - Select 'Add route'
   - Select 'Internet gateway' from drop down list
-  - define the value with '0.0.0.0/0' < Public use, public needs to access
+  - Define the value with '0.0.0.0/0' < Public use, public needs to access
 - Select 'Save changes'
 
 - Select the 'Subnet associations' tab
 - Select 'Edit subnet associations'
 - Select your subnet
 - Select 'Save association'
+
+### To add a private subnet route:
+
+- Instance - your app
+- Define the value with '0.0.0.0/0'
 
 ## Testing VPC
 

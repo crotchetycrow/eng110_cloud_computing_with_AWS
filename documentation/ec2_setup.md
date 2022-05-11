@@ -15,28 +15,38 @@
   - Choose the launch instance option
 - Select Ubuntu 18.04 (free tier)
 - Select t2 micro, it's a 3 page app doesn't need much.
+
 #### In configuring instance details select the following:
-  - Number of Instance: 1
-  - Default network
-  - Select subnet default DevOpsStudent - default euw ending in 1a
-  - Auto-assign public IP: Enable
-#### No changes to Storage -  More than enough
+
+- Number of Instance: 1
+- Default network
+- Select subnet default DevOpsStudent - default euw ending in 1a
+- Auto-assign public IP: Enable
+
+#### No changes to Storage - More than enough
+
 - Add tag eng110_jack (So we know that it belongs to me)
+
 #### Security Group:
-  - Create a new Security Group
-  - Name it "eng110_jack"
-  - Give description
-  - Two rules:
-    - SSH with the source being 'My IP'
-      - Give description (Office ip)
-    - HTTP with source being 'Anywhere'
-      - Give description "NGINX"
-  - Review
+
+- Create a new Security Group
+- Name it "eng110_jack"
+- Give description
+- Two rules:
+  - SSH with the source being 'My IP'
+    - Give description (Office ip)
+  - HTTP with source being 'Anywhere'
+    - Give description "NGINX"
+  - Custom TCP with Port 3000 and source being 'Anywhere'
+- Review
+
 #### Launch:
+
     - Choose existing key pair:
       - eng119 | RSA
 
 ## Connecting to EC2
+
 - Click on instance
 - Connect (top right)
 - Click on SSH CLIENT
@@ -80,27 +90,28 @@
 - `npm start &` - Runs npm in the background
 
 #### Diagram of set up process:
+
 ![](../img/EC2_diagram.png)
 
-  
 #### Reverse proxy with NGINX
 
 - In Security Groups, edit inbound rules
   - Custom TCP, set port range to 3000
 - In /etc/nginx/sites-available/default:
+
   - `nano default` and add the following:
+
     - server_name your-ip;
 
-        location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
-                proxy_pass http://localhost:3000;
-        }
+      location / { # First attempt to serve request as file, then # as directory, then fall back to displaying a 404.
+      try_files $uri $uri/ =404;
+      proxy_pass http://localhost:3000;
+      }
 
-        location /fibonacci/ {
-                proxy_pass http://localhost:3000/fibonacci/;
-        }
+      location /fibonacci/ {
+      proxy_pass http://localhost:3000/fibonacci/;
+      }
+
 - `npm start` - Tada!
 
 #### Setting up a DB EC2
@@ -122,11 +133,12 @@
   - or `sudo systemctl status mongod`
 
 #### Connecting App EC2 to DB EC2
+
 - In the app EC2 app folder create an env variable DB_HOST
   - `export DB_HOST=mongodb://db-ip:27017/posts`
 - `sudo node seeds/seed.js` - Finds, connects and seeds to DB
 - `npm start` - Tada!
 
-
 ## Upon stopping and restarting the EC2s
+
 - Repeat previous steps
