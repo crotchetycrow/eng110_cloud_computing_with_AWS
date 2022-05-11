@@ -82,5 +82,3 @@ Custom NACL is a user-defined NACL, and by default, it denies all the inbound an
 NACL can be understood as the firewall or protection for the subnet. Security group can be understood as a firewall to protect EC2 instances.
 
 Think the security guard checking a guest list (rules), if your name (rule number) flags then you are denied access to the bar (subnet).
-
-![](../img/VPC_diagram.png)

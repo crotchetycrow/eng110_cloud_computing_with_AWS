@@ -68,3 +68,5 @@ Isolated space in Ireland - empty, the address has been validated
 - Go through the usual process
   - In networking select your VPC
 - Connect to EC2
+
+![](../img/VPC_diagram.png)
