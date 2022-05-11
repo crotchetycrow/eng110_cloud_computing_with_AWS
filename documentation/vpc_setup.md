@@ -64,11 +64,6 @@ Creating a private subnet
 - Select your subnet
 - Select 'Save association'
 
-### To add a private subnet route:
-
-- Instance - your app
-- Define the value with '0.0.0.0/0'
-
 ## Testing VPC
 
 - EC2 Dashboard > AMIs
@@ -86,7 +81,7 @@ Creating a private subnet
 - Using your DB AMI, spin up an EC2 instance
 - In the security group, remove the SHH
 - Replace with custom TCP
-- In source enter app EC2 public IPv4
+- In source enter public subnet IPv4
 - In app, unset DB_HOST
 - export DB_HOST=mongodb://db_private_IP:27017/posts
 
