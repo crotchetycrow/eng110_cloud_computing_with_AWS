@@ -73,8 +73,6 @@ Creating a private subnet
   - In networking select your VPC
 - Connect to EC2
 
-![](../img/VPC_diagram.png)
-
 ## Connecting a public subnet to a private subnet:
 
 - Create a private subnet with 10.0.255.0/24
