@@ -3,10 +3,11 @@
 - [Setting up an EC2](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/ec2_setup.md)
 - [Setting up an AMI](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/ami_setup.md)
 - [Setting up an S3 bucket](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/s3_setup.md)
-- [Setting up an ASG bucket](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/asg_setup.md)
+- [Setting up an ASG](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/asg_setup.md)
   - [Information on ASG](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/aws_autoscaling.md)
 - [Setting up a VPC bucket](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/vpc_setup.md)
   - [Information on VPC](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/vpc_architecture.md)
+- [Information on CICD](https://github.com/crotchetycrow/eng110_cloud_computing_with_AWS/blob/master/documentation/CICD.md)
 
 ## What is cloud computing?
 
