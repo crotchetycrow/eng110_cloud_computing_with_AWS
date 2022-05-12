@@ -62,4 +62,4 @@ It eases the developer’s work of integrating the code changes to the project s
 - Concourse, "an open-source continuous thing-doer."
 - Screwdriver, a build platform designed for CD.
 
-![](../img/ci-cd-flow.png)
+
