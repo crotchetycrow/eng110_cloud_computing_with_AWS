@@ -61,3 +61,5 @@ It eases the developer’s work of integrating the code changes to the project s
 - GoCD, a CI/CD server with an emphasis on modeling and visualization.
 - Concourse, "an open-source continuous thing-doer."
 - Screwdriver, a build platform designed for CD.
+
+![](../img/ci-cd-flow.png)
