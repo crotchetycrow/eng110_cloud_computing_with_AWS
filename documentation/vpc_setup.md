@@ -84,5 +84,3 @@ Creating a private subnet
 - export DB_HOST=mongodb://db_private_IP:27017/posts
 
 Tada.
-
-![](../img/VPC_diagram.png)
