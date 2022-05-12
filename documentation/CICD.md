@@ -4,6 +4,8 @@
 
 A CI/CD pipeline lets you automate steps in the software deployment process, such as initiating code builds, performing automated testing, and deploying to a staging or production environment. Automated pipelines eliminate manual errors, provide standardized development feedback loops and allow faster iterations.
 
+![](../img/ci-cd-flow.png)
+
 ### CI
 
 Refers to Continuous Integration which is an automation process for developers. Successful CI means new code changes to an app are regularly built, tested, and merged to a shared repository.
@@ -62,4 +64,4 @@ It eases the developer’s work of integrating the code changes to the project s
 - Concourse, "an open-source continuous thing-doer."
 - Screwdriver, a build platform designed for CD.
 
-![](../img/ci-cd-flow.png)
+
